@@ -44,7 +44,7 @@ jobs:
       mysql:
         image: mysql
         env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: true
+          MYSQL_ROOT_PASSWORD: password
           MYSQL_DATABASE: app_test
         ports:
           - 3306:3306
@@ -72,7 +72,7 @@ jobs:
       - name: Set up database
         env:
           RAILS_ENV: test
-          DATABASE_URL: mysql2://root@127.0.0.1:3306/app_test
+          DATABASE_URL: mysql2://root:password@127.0.0.1:3306/app_test
         run: |
           bundle exec rails db:create
           bundle exec rails db:schema:load
