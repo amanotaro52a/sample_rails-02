@@ -19,9 +19,9 @@ class UsersController < ApplicationController
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity}
+        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
-    end  
+    end
   end
 
   def update
@@ -31,11 +31,11 @@ class UsersController < ApplicationController
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }  
+        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
- 
+
   def destroy
     @user.destroy
 
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: "ユーザー情報は削除されました" }
       format.json { head :no_content }
     end
-  end  
+  end
 
   private
   def set_user
@@ -53,5 +53,5 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :age)
-  end  
+  end
 end
