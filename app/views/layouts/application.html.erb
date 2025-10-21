@@ -20,6 +20,14 @@
   <body>
     <header class="page-header">
       <h1 class="header-title">Rails練習用</h1>
+        <div class="login-button">
+          <% if current_user.present? %>
+            <span class="btn btn-primary"><%= current_user.name %></span>
+            <%= link_to "ログアウト", logout_path, class: "login-link" %>
+          <% else %>
+            <%= link_to "ログイン", new_login_path, class: "login-link" %>
+          <% end %> 
+        </div>
     </header>  
     <%= yield %>
   </body>

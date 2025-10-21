@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   root "static_pages#index"
   resources :users
   resource :login, only: %i[ new create ]
+  resource :logout, only: %i[ show ]
 end

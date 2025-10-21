@@ -17,12 +17,14 @@ body {
   line-height: 1.9;
 }
 .page-header {
-  background-color: black;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
 }
 .header-title {
   color: white;
   padding-left: 1rem;
-}
+  }
 .login-link {
     display: inline-block;
     background-color: #28a745;
@@ -32,6 +34,7 @@ body {
     border-radius: 8px;
     text-decoration: none;
     transition: background-color 0.2s;
+    margin: 30px 20px;
   }
   
   .login-link:hover {
