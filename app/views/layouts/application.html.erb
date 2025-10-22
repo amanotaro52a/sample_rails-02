@@ -28,7 +28,17 @@
             <%= link_to "ログイン", new_login_path, class: "login-link" %>
           <% end %> 
         </div>
-    </header>  
-    <%= yield %>
+    </header>
+
+    <div class="container-fuild">
+      <div class="row">
+        <nav id="sidebarMenu" class="sidebar">
+        <%= render 'layouts/sidebar' %>
+        </nav>
+      </div>    
+    </div>   
+    <div class="content"> 
+      <%= yield %>
+    </div>
   </body>
 </html>
