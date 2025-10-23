@@ -13,21 +13,19 @@
  *= require_tree .
  *= require_self
  */
-body {
-  line-height: 1.9;
-}
 .content {
-  margin-left: 8%;
+  margin-left: 100px;
 }
 .page-header {
   background-color: red;
   display: flex;
   justify-content: space-between;
-  margin-left: 5.9%;
+  position: relative;
+  z-index: 100;
 }
 .header-title {
   color: white;
-  padding-left: 1rem;
+  margin-left: 20px;
   }
 .login-link {
     display: inline-block;
@@ -45,13 +43,25 @@ body {
     background-color: #218838;
   }
 .sidebar {
-  width: 150px;
+  width: 90px;
+  font-size: x-small;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 100;
   padding: 48px 0 0;
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
   background-color: antiquewhite;
+}
+.nav {
+  margin-top: 100px;
+}
+@media (min-width: 425px) {
+  .content {
+    margin-left: 120px;
+  }
+  .sidebar {
+    width: 120px;
+    font-size: large;
+  }
 }
